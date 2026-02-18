@@ -2256,6 +2256,14 @@ public class VimStub {
         getWsc().invoke("StandbyGuest", paras, null);
     }
 
+    public int putUsbScanCodes(ManagedObjectReference _this, UsbScanCodeSpec spec) throws java.rmi.RemoteException, RuntimeFault {
+        Argument[] paras = new Argument[2];
+        paras[0] = new Argument("_this", "ManagedObjectReference", _this);
+        paras[1] = new Argument("spec", "UsbScanCodeSpec", spec);
+        Integer ret = (Integer) getWsc().invoke("PutUsbScanCodes", paras, "int");
+        return ret.intValue();
+    }
+
     public void answerVM(ManagedObjectReference _this, String questionId, String answerChoice) throws java.rmi.RemoteException, ConcurrentAccess, RuntimeFault {
         Argument[] paras = new Argument[3];
         paras[0] = new Argument("_this", "ManagedObjectReference", _this);

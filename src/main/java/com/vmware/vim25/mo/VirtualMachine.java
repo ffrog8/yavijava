@@ -155,6 +155,10 @@ public class VirtualMachine extends ManagedEntity {
         getVimService().answerVM(getMOR(), questionId, answerChoice);
     }
 
+    public int putUsbScanCodes(UsbScanCodeSpec spec) throws RuntimeFault, RemoteException {
+        return getVimService().putUsbScanCodes(getMOR(), spec);
+    }
+
     public void checkCustomizationSpec(CustomizationSpec spec) throws CustomizationFault, RuntimeFault, RemoteException {
         getVimService().checkCustomizationSpec(getMOR(), spec);
     }
